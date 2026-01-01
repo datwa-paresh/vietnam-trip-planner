@@ -81,6 +81,8 @@ const Index = () => {
               location={day.location}
               activities={day.activities}
               isToday={day.day === today}
+              bestPhotoSpots={day.bestPhotoSpots}
+              recommendedRestaurants={day.recommendedRestaurants}
             />
           ))}
         </div>
