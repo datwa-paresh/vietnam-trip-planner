@@ -33,6 +33,52 @@ export const documentTypes = [
   { id: "evisa", title: "E-Visa" },
 ];
 
+export const hotels = [
+  {
+    id: 1,
+    name: "Hanoi Accommodation",
+    location: "Đống Đa, Hà Nội",
+    address: "109 Phố Ô Đồng Lầm, Đống Đa, Hà Nội, Vietnam",
+    checkIn: "Jan 4, 2025",
+    checkOut: "Jan 7, 2025",
+    nights: 3,
+    guests: 4,
+    rating: 4.5,
+    type: "Hotel",
+    url: "https://www.airbnb.co.in/trips/shared/754505c6-65fe-478c-8ece-7d9c68512233?confCode=HMXH4PF43E&principal_token=0699abce-362e-4dde-9ab2-130e65a22d58&s=67&unique_share_id=16f304f3-4422-451c-bae4-c45fa15116c2",
+    image: "https://a0.muscache.com/im/pictures/miso/Hosting-1408337160484916697/original/aa706967-5229-4d3c-a8b4-6e888a9d1800.jpeg?im_w=1200",
+  },
+  {
+    id: 2,
+    name: "Da Nang Beach Accommodation",
+    location: "My Khe Beach, Da Nang",
+    address: "51 Trần Bạch Đằng, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam",
+    checkIn: "Jan 7, 2025",
+    checkOut: "Jan 10, 2025",
+    nights: 3,
+    guests: 4,
+    rating: 4.7,
+    type: "Beach Stay",
+    url: "https://www.airbnb.co.in/trips/shared/14a93d14-352b-42d6-9646-d7ef47df875d?confCode=HMKSQ58JTE&principal_token=fd72defa-caa7-4c1b-bc29-99831b4296fd&s=67&unique_share_id=30706e27-eb12-424c-b5f8-551d909b30de",
+    image: "https://a0.muscache.com/im/pictures/miso/Hosting-728886085784975389/original/d4733970-dda6-4439-a968-60ee258ddcba.jpeg?im_w=1200",
+  },
+  {
+    id: 3,
+    name: "Ho Chi Minh Accommodation",
+    location: "Quận 4, Hồ Chí Minh",
+    address: "151 Bến Vân Đồn, Quận 4, Hồ Chí Minh, Vietnam",
+    checkIn: "Jan 10, 2025",
+    checkOut: "Jan 12, 2025",
+    nights: 2,
+    guests: 4,
+    rating: 4.6,
+    type: "City Hotel",
+    url: "https://www.airbnb.co.in/trips/shared/486b554a-d02f-4699-9614-8420bd75d840?confCode=HMCRFXQNBH&principal_token=39311471-fc2e-4e49-978d-6d7cc6c57f93&s=67&unique_share_id=039d3242-8805-4646-9be7-429ed2afd967",
+    image: "https://a0.muscache.com/im/pictures/e94782d7-8e99-457b-bfb4-7bab1c59e381.jpg?im_w=1200",
+  },
+];
+
+
 export const flights = [
   {
     id: 1,

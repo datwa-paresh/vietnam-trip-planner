@@ -1,10 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Plane, FileText, Users } from "lucide-react";
+import { Home, Plane, Building2, FileText, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { path: "/", icon: Home, label: "Itinerary" },
   { path: "/flights", icon: Plane, label: "Flights" },
+  { path: "/hotels", icon: Building2, label: "Hotels" },
   { path: "/documents", icon: FileText, label: "Documents" },
   { path: "/travelers", icon: Users, label: "Travelers" },
 ];
