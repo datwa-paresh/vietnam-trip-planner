@@ -7,9 +7,9 @@ const Documents = () => {
   // For demo, showing different completion states
   const documentStatus = {
     paresh: 5,
-    akash: 3,
+    akash: 5,
     prerna: 5,
-    navneeta: 4,
+    navneeta: 5,
   };
 
   return (
@@ -48,6 +48,8 @@ const Documents = () => {
                 id={traveler.id}
                 documentsComplete={documentStatus[traveler.id as keyof typeof documentStatus]}
                 totalDocuments={documentTypes.length}
+                url={traveler.url}
+                image={traveler.image}
               />
             </div>
           ))}

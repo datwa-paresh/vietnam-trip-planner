@@ -6,10 +6,10 @@ import { User, Phone, Mail } from "lucide-react";
 const Travelers = () => {
   // Demo contact info
   const contactInfo: { [key: string]: { phone: string; email: string } } = {
-    paresh: { phone: "+91 98XXX XXXXX", email: "paresh@email.com" },
-    akash: { phone: "+91 98XXX XXXXX", email: "akash@email.com" },
-    prerna: { phone: "+91 98XXX XXXXX", email: "prerna@email.com" },
-    navneeta: { phone: "+91 98XXX XXXXX", email: "navneeta@email.com" },
+    paresh: { phone: "+91 8917351934", email: "pareshsahoo902@gmail.com" },
+    akash: { phone: "+91 99377 70400", email: "Akashkumar06sk@gmail.com" },
+    prerna: { phone: "+91 7327 967 554", email: "Prerna200012@gmail.com" },
+    navneeta: { phone: "+91 9110964248", email: "Navneetaprasad1812@gmail.com" },
   };
 
   return (
@@ -29,9 +29,19 @@ const Travelers = () => {
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-display font-bold text-lg">
-                {traveler.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
-              </div>
+              {traveler.image ? (
+                <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/30">
+                  <img 
+                    src={traveler.image} 
+                    alt={traveler.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-display font-bold text-lg">
+                  {traveler.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+                </div>
+              )}
               
               <div className="flex-1">
                 <h3 className="font-display font-semibold text-lg text-foreground">{traveler.name}</h3>

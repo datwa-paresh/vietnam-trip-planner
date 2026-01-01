@@ -89,22 +89,7 @@ const Index = () => {
       </div>
 
       {/* Quick Stats */}
-      <div className="px-4 mt-6">
-        <h2 className="font-display text-lg font-semibold text-foreground mb-3">Cities to Visit</h2>
-        <div className="grid grid-cols-3 gap-3">
-          {[
-            { city: "Hanoi", days: "3 nights", emoji: "🏛️" },
-            { city: "Da Nang", days: "3 nights", emoji: "🏖️" },
-            { city: "Ho Chi Minh", days: "2 nights", emoji: "🌃" },
-          ].map((item) => (
-            <div key={item.city} className="glass-card rounded-xl p-3 text-center">
-              <span className="text-2xl mb-1 block">{item.emoji}</span>
-              <h3 className="font-medium text-sm text-foreground">{item.city}</h3>
-              <p className="text-xs text-muted-foreground">{item.days}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      
 
       <BottomNav />
     </div>

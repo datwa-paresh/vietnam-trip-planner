@@ -11,6 +11,7 @@ interface FlightCardProps {
   arrivalDate?: string;
   arrivalTime: string;
   isReturn?: boolean;
+  url?: string;
 }
 
 const FlightCard = ({
@@ -23,12 +24,31 @@ const FlightCard = ({
   arrivalDate,
   arrivalTime,
   isReturn,
+  url,
 }: FlightCardProps) => {
+  const handleClick = () => {
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className={cn(
-      "glass-card rounded-2xl p-5 animate-fade-in",
-      isReturn && "border-accent/30 bg-accent/5"
-    )}>
+    <div 
+      className={cn(
+        "glass-card rounded-2xl p-5 animate-fade-in transition-all duration-200",
+        isReturn && "border-accent/30 bg-accent/5",
+        url && "cursor-pointer hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+      )}
+      onClick={handleClick}
+      role={url ? "button" : undefined}
+      tabIndex={url ? 0 : undefined}
+      onKeyDown={(e) => {
+        if (url && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
+    >
       {/* Flight Route */}
       <div className="flex items-center justify-between mb-4">
         <div className="text-center">

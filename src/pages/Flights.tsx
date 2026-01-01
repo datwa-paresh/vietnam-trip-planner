@@ -26,6 +26,7 @@ const Flights = () => {
               arrivalDate={flight.arrivalDate}
               arrivalTime={flight.arrivalTime}
               isReturn={flight.isReturn}
+              url={flight.url}
             />
           </div>
         ))}

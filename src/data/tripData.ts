@@ -1,8 +1,28 @@
 export const travelers = [
-  { id: "paresh", name: "Paresh Kumar Sahoo" },
-  { id: "akash", name: "Akash Kumar" },
-  { id: "prerna", name: "Prerna Kumari Singh" },
-  { id: "navneeta", name: "Navneeta Prasad" },
+  { 
+    id: "paresh", 
+    name: "Paresh Kumar Sahoo",
+    url: "https://drive.google.com/drive/folders/1N4jvUU7WxpuuKBoxJJka-fLHegF3Ek0Q?usp=drive_link",
+    image: "/src/images/paresh.jpeg"
+  },
+  { 
+    id: "akash", 
+    name: "Akash Kumar",
+    url: "https://drive.google.com/drive/folders/19lf25Va37jtpeb_7kAXN30mgKp-8yM1H?usp=drive_link",
+    image: "/src/images/akash.jpeg"
+  },
+  { 
+    id: "prerna", 
+    name: "Prerna Kumari Singh",
+    url: "https://drive.google.com/drive/folders/1pBkV6xT88QFmTvQPmZXYu2ugS7t3eOZ8?usp=drive_link",
+    image: "/src/images/prerna.jpeg"
+  },
+  { 
+    id: "navneeta", 
+    name: "Navneeta Prasad",
+    url: "https://drive.google.com/drive/folders/1-6MTcQ0_-HKX0kOMmJIGzETEJIvod_8D?usp=drive_link",
+    image: "/src/images/navneeta.jpeg"
+  },
 ];
 
 export const documentTypes = [
@@ -24,6 +44,7 @@ export const flights = [
     departureTime: "Evening",
     arrivalDate: "Jan 4, 2025",
     arrivalTime: "5:50 AM",
+    url: "https://drive.google.com/file/d/1eeD_X2x5BZCKemMC3S5enJn-GcKyDPh5/view?usp=sharing",
   },
   {
     id: 2,
@@ -34,6 +55,7 @@ export const flights = [
     departureDate: "Jan 7, 2025",
     departureTime: "6:00 AM",
     arrivalTime: "7:30 AM",
+    url: "https://drive.google.com/file/d/1TVERz2bsxLrg5FCvbSVEOlNXIt7vU-sY/view?usp=drive_link",
   },
   {
     id: 3,
@@ -44,6 +66,7 @@ export const flights = [
     departureDate: "Jan 10, 2025",
     departureTime: "6:00 AM",
     arrivalTime: "7:30 AM",
+    url: "https://drive.google.com/file/d/1pMqthD_Dj_ko6guRrwlqRvPiuLLS3qJg/view?usp=drive_link",
   },
   {
     id: 4,
@@ -55,6 +78,7 @@ export const flights = [
     departureTime: "7:15 PM",
     arrivalTime: "11:35 PM",
     isReturn: true,
+    url: "https://drive.google.com/file/d/15t59R2RNhdE_U2TJber8R8f0odRQN-ay/view?usp=drive_link",
   },
 ];
 
