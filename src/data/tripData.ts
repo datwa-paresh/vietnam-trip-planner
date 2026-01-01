@@ -3,28 +3,27 @@ export const travelers = [
     id: "paresh", 
     name: "Paresh Kumar Sahoo",
     url: "https://drive.google.com/drive/folders/1N4jvUU7WxpuuKBoxJJka-fLHegF3Ek0Q?usp=drive_link",
-    image: "/src/images/paresh.jpeg"
+    image: "https://i.ibb.co/NgVdXZBn/paresh.jpg"
   },
   { 
     id: "akash", 
     name: "Akash Kumar",
     url: "https://drive.google.com/drive/folders/19lf25Va37jtpeb_7kAXN30mgKp-8yM1H?usp=drive_link",
-    image: "/src/images/akash.jpeg"
+    image: "https://i.ibb.co/Lz6BMHqF/akash.jpg"
   },
   { 
     id: "prerna", 
     name: "Prerna Kumari Singh",
     url: "https://drive.google.com/drive/folders/1pBkV6xT88QFmTvQPmZXYu2ugS7t3eOZ8?usp=drive_link",
-    image: "/src/images/prerna.jpeg"
+    image: "https://i.ibb.co/9k23Cc4p/prerna.jpg"
   },
   { 
     id: "navneeta", 
     name: "Navneeta Prasad",
     url: "https://drive.google.com/drive/folders/1-6MTcQ0_-HKX0kOMmJIGzETEJIvod_8D?usp=drive_link",
-    image: "/src/images/navneeta.jpeg"
+    image: "https://i.ibb.co/TDbqbGWc/navneeta.jpg"
   },
 ];
-
 export const documentTypes = [
   { id: "aadhar", title: "Aadhar Card" },
   { id: "pan", title: "PAN Card" },

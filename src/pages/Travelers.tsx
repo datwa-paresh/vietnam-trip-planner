@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
 import { travelers } from "@/data/tripData";
 import { User, Phone, Mail } from "lucide-react";
+import { useState } from "react";
 
 const Travelers = () => {
   // Demo contact info
@@ -10,6 +11,13 @@ const Travelers = () => {
     akash: { phone: "+91 99377 70400", email: "Akashkumar06sk@gmail.com" },
     prerna: { phone: "+91 7327 967 554", email: "Prerna200012@gmail.com" },
     navneeta: { phone: "+91 9110964248", email: "Navneetaprasad1812@gmail.com" },
+  };
+
+  // Track failed images
+  const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
+
+  const handleImageError = (travelerId: string) => {
+    setFailedImages(prev => new Set(prev).add(travelerId));
   };
 
   return (
@@ -29,16 +37,18 @@ const Travelers = () => {
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div className="flex items-start gap-4">
-              {traveler.image ? (
+              {traveler.image && !failedImages.has(traveler.id) ? (
                 <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary/30">
                   <img 
                     src={traveler.image} 
                     alt={traveler.name}
                     className="w-full h-full object-cover"
+                    onError={() => handleImageError(traveler.id)}
+                    crossOrigin="anonymous"
                   />
                 </div>
               ) : (
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-display font-bold text-lg">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center text-primary-foreground font-display font-bold text-lg flex-shrink-0">
                   {traveler.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
                 </div>
               )}

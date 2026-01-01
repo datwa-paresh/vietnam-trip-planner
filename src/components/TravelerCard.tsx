@@ -18,6 +18,19 @@ const TravelerCard = ({ name, id, documentsComplete, totalDocuments, url, image 
       window.open(url, '_blank', 'noopener,noreferrer');
     }
   };
+
+  // Handle image error by showing fallback
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    e.currentTarget.style.display = 'none';
+    const parent = e.currentTarget.parentElement;
+    if (parent) {
+      parent.innerHTML = `
+        <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-primary/20 text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      `;
+    }
+  };
   
   return (
     <div 
@@ -41,6 +54,8 @@ const TravelerCard = ({ name, id, documentsComplete, totalDocuments, url, image 
               src={image} 
               alt={name}
               className="w-full h-full object-cover"
+              onError={handleImageError}
+              crossOrigin="anonymous"
             />
           </div>
         ) : (
